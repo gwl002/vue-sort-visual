@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript实现可视化排序</title>
+	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+	    <div>
+	        <div>
+	            <canvas id="canvas" width="450" height="350"></canvas>
+	        </div>
+	        <div>
+	            <button @click="start()">开始</button>
+	        </div>
+	        <div>
+	            <label for="">速度</label>
+	            <input type="range" min="10" max="100" step="5" v-model="speed"/>
+	        </div>
+	        <div>
+	            <label for="">算法</label>
+	            <select name="" id="algorithm" v-model="selectedAlgorithm" >
+	                <option :value="algorithm" v-for="algorithm in algorithms">{{algorithm}}</option>
+	            </select>
+	        </div>
+	        <div>
+	            一共走了{{totalSteps}}步
+	        </div>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript" src="./app.js"></script>
+</html>
